@@ -14,19 +14,15 @@ class Author
     @@all
   end 
   
-  def add_post(post)
-    post.author = self
+  def add_post(new_post)
+    new_post.author = self
+    binding.pry
   end 
   
-  def add_post_by_title(post)
-    title = Post.new(post) 
-    add_post(title)
+  def add_post_by_title(post_title)
+    new_post = Post.new(post_title) 
+    add_post(new_post)
   end 
-  
-  # def add_song_by_name(song_name)
-   # song = Song.new(song_name)
-    # add_song(song)
-  # end 
   
   def posts 
     Post.all.select {|post| post.author = self}
