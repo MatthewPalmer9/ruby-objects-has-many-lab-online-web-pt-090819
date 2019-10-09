@@ -27,7 +27,7 @@ class Author
     Post.all.select {|post| post.author = self}
   end 
   
-  def post_count
-    Author.all.length
+  def self.post_count
+    Post.all.length
   end
 end
