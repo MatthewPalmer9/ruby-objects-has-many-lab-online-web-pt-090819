@@ -16,12 +16,12 @@ class Author
   
   def add_post(post_title)
     post_title.author = self
+    binding.pry 
   end 
   
   def add_post_by_title(title)
     postName = Post.new(title) 
     add_post(postName)
-    binding.pry
   end 
   
   # def add_song_by_name(song_name)
